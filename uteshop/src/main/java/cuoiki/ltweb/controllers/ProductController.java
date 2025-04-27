@@ -37,16 +37,9 @@ import cuoiki.ltweb.services.*;
 @MultipartConfig
 public class ProductController extends HttpServlet{
 	//public static final String UPLOAD_DIRECTORY = "C:\\Users\\Admin\\git\\repositoryDoAnCNTT\\uteshop\\src\\main\\webapp\\Images";
-	public String UPLOAD_DIRECTORY;
+	public static final String UPLOAD_DIRECTORY = "/opt/tomcat-uploads/";
 	public static final String DEFAULT_FILENAME = "default.file";
 	
-	 @Override
-	    public void init() throws ServletException {
-	        UPLOAD_DIRECTORY = getServletContext().getRealPath("/Images");
-	    }
-
-
-
 	@SuppressWarnings("null")
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
