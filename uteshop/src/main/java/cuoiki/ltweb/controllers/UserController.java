@@ -33,14 +33,10 @@ import cuoiki.ltweb.services.*;
 @WebServlet(urlPatterns = {"/v1/api/getUserInfo","/user/profile","/user/profile/update"})
 @MultipartConfig
 public class UserController extends HttpServlet{
-//	public static final String UPLOAD_DIRECTORY = "C:\\Users\\Admin\\git\\repositoryDoAnCNTT\\uteshop\\src\\main\\webapp\\Images";
-	public String UPLOAD_DIRECTORY;
+	//public static final String UPLOAD_DIRECTORY = "C:\\Users\\Admin\\git\\repositoryDoAnCNTT\\uteshop\\src\\main\\webapp\\Images";
+	public static final String UPLOAD_DIRECTORY = "/opt/tomcat-uploads/";
 	
-	
-	 @Override
-	    public void init() throws ServletException {
-	        UPLOAD_DIRECTORY = getServletContext().getRealPath("/Images");
-	    }
+
 	public static final String DEFAULT_FILENAME = "default.file";
 	IUserService user_service = new IUserServiceImpl();
 	IWishlistService wishlist_service = new IWishlistServiceImpl();
